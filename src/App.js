@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import Header from './Header'
 import './App.css';
-
+import Home from './Home'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Topadvertise from './Topadvertise';
+import Footer from './Footer';
+import Menu from './Menu';
+import SearchPage from './SearchPage'
+import Airbnbhome from './Airbnbhome';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+       <Router>
+       <Topadvertise/>
+        <Header />
+
+    
+        <Menu/>
+        <Routes>
+          <Route path="/search" element={<SearchPage />}>
+            
+          </Route>
+          <Route path="/" element={<Home />}>
+          
+          </Route>
+          <Route path="/searchpage" element={<SearchPage/>}></Route>
+          <Route path="/Airbnbyourhome" element={<Airbnbhome/>}></Route>
+        </Routes>
+        
+        <Footer />
+      </ Router>
     </div>
+    
   );
 }
 

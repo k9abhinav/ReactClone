@@ -1,0 +1,19 @@
+.menu{
+    background-color: #dadada8a;
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    height:11vh;
+    padding: 0.5rem 0rem;
+}
+.eachmenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.4rem;
+    border-radius: 10px;
+}
+.eachmenu:hover{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
